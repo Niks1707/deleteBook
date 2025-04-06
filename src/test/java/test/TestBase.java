@@ -16,15 +16,14 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 public class TestBase {
     @BeforeAll
     static void beforeAll(){
-
-        Configuration.remote = "https://" + System.getProperty("login") + "@selenoid.autotests.cloud/wd/hub";
-        Configuration.browser = System.getProperty("browserName","chrome");
-        Configuration.browserSize = System.getProperty("browserSize");
-        Configuration.browserVersion = System.getProperty("browserVersion");
-
-        RestAssured.baseURI = "https://demoqa.com";
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.pageLoadStrategy = "eager";
+        
+        
+        Configuration.browserSize = "1920x1080";
+        Configuration.browser = "chrome";
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+       RestAssured.baseURI = "https://demoqa.com";
+       Configuration.baseUrl = "https://demoqa.com";
+       Configuration.pageLoadStrategy = "eager";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
