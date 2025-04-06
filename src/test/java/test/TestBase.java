@@ -17,7 +17,7 @@ public class TestBase {
     @BeforeAll
     static void beforeAll(){
 
-        //Configuration.remote = "https://" + System.getProperty("login") + "@" + System.getProperty("remote");
+        Configuration.remote = "https://" + System.getProperty("login") + "@" + System.getProperty("remote");
         Configuration.browserSize = System.getProperty("browserSize");
         Configuration.browser = System.getProperty("browserName", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion");

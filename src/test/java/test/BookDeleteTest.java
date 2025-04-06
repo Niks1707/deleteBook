@@ -1,6 +1,6 @@
 package test;
 
-import Pages.ProfilePage;
+import pages.ProfilePage;
 import api.BookShopApi;
 import helpers.DataStorage;
 import helpers.WithLogin;
@@ -9,8 +9,6 @@ import models.AddBookRequest;
 import models.RegisterResponse;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.w3c.dom.stylesheets.LinkStyle;
-
 import java.util.List;
 
 @Tag("Test")
@@ -31,6 +29,4 @@ public class BookDeleteTest extends TestBase {
              .confirmDeleteAllBooks()
              .isBookRemovedSuccessful();
     }
-    
-    
 }

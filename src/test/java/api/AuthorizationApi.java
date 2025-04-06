@@ -1,14 +1,11 @@
 package api;
 
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.qameta.allure.Step;
 import models.RegisterRequest;
 import models.RegisterResponse;
-
 import java.io.File;
 import java.io.IOException;
-
 import static specs.LogSpec.RequestSpec;
 import static specs.LogSpec.ResponseSpec200;
 import static io.restassured.RestAssured.given;
@@ -24,7 +21,6 @@ public class AuthorizationApi {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        
         return given(RequestSpec)
                 .body(registerRequest)
                 .when()
